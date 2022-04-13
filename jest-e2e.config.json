@@ -1,0 +1,21 @@
+{
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.test.json"
+    }
+  },
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "<rootDir>/test",
+    "factory.ts"
+  ],
+  "coverageDirectory": "./coverage-e2e",
+  "setupFilesAfterEnv": ["<rootDir>/test/setup.e2e.js"]
+}

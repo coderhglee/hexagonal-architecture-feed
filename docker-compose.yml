@@ -1,0 +1,24 @@
+version: "3"
+services:
+    db:
+        image: postgres
+        environment:
+            - POSTGRES_USER=user
+            - POSTGRES_DB=next-ts-jwt-boilerplate
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_HOST_AUTH_METHOD=trust
+        volumes:
+            - ./db/data/postgres:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
+    db-test:
+        image: postgres
+        environment:
+            - POSTGRES_USER=user
+            - POSTGRES_DB=next-ts-jwt-boilerplate
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_HOST_AUTH_METHOD=trust
+        volumes:
+            - ./db/data-test/postgres:/var/lib/postgresql/data
+        ports:
+            - 5430:5432

@@ -1,0 +1,18 @@
+{
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.test.json"
+    }
+  },
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testMatch": ["**/(*.)(spec|test).(t|j)s"],
+  "testPathIgnorePatterns": ["/node_modules/", "e2e-spec.(t|j)s"],
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coveragePathIgnorePatterns": ["/node_modules/", "factory.ts"],
+  "coverageDirectory": "./coverage-unit",
+  "setupFilesAfterEnv": ["<rootDir>/test/setup.unit.js"]
+}
