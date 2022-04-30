@@ -14,5 +14,10 @@
   },
   "coveragePathIgnorePatterns": ["/node_modules/", "factory.ts"],
   "coverageDirectory": "./coverage-unit",
-  "setupFilesAfterEnv": ["<rootDir>/test/setup.unit.js"]
+  "setupFilesAfterEnv": ["<rootDir>/test/setup.unit.js"],
+  "moduleNameMapper": {
+    "^@payment/(.*)$": "<rootDir>/src/payment/$1",
+    "^@common/(.*)$": "<rootDir>/src/common/$1",
+    "^test/(.*)$": "<rootDir>/test/$1"
+  }
 }

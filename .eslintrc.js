@@ -29,4 +29,9 @@ module.exports = {
     ],
     '@typescript-eslint/no-empty-interface': 'off',
   },
+  settings: {
+    "import/resolver": {
+      typescript: {}
+    },
+  },
 };

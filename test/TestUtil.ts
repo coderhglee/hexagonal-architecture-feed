@@ -1,8 +1,6 @@
-import { Sequelize } from 'sequelize-typescript';
+import { ModelCtor, Sequelize } from 'sequelize-typescript';
 
-import { CatModel } from '../src/cat/persistence/models/cat/cat.model';
-
-import { sequelizeClientFactory } from '../src/common/sequelize-client.factory';
+import { sequelizeClientFactory } from '@common/sequelize-client.factory';
 
 export class TestDatabase {
   private readonly database: Sequelize;
@@ -11,8 +9,8 @@ export class TestDatabase {
     this.database = sequelizeClientFactory();
   }
 
-  async init() {
-    this.database.addModels([CatModel]);
+  async init(models?: ModelCtor[]) {
+    this.database.addModels(models);
     await this.database.sync();
   }
 

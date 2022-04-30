@@ -13,9 +13,11 @@ afterAll(async () => {
 
   const schemas = await db.showAllSchemas({});
 
-  if (schemas.length > 0) {
-    await db.dropAllSchemas({});
-  }
+  console.log(schemas);
+  // if (schemas.length > 0) {
+  // }
+  console.log('clear');
+  await db.dropAllSchemas({});
 
   await db.close();
 });
